@@ -1,0 +1,156 @@
+:root {
+  /* colors */
+  --clr-primary--soft-red: hsl(10, 79%, 65%);
+  --clr-primary--cyan: hsl(186, 34%, 60%);
+
+  --clr-neutral--dark-brown: hsl(25, 47%, 15%);
+  --clr-neutral--medium-brown: hsl(28, 10%, 53%);
+  --clr-neutral--cream: hsl(27, 66%, 92%);
+  --clr-neutral--very-pale-orange: hsl(33, 100%, 98%);
+
+  /* typography */
+  --fz-default: 16px;
+  --fz-primary: 1.8rem;
+
+  --ff-primary: "DM Sans", sans-serif;
+  --fw-normal: 400;
+  --fw-bold: 700;
+
+  /* layout and spacing */
+  --max-width: 40rem;
+  --bdrs: 10px;
+
+  --mg-50: 0.5em;
+  --mg-100: 1em;
+  --mg-150: 1.5em;
+  --mg-200: 2em;
+
+  --pad-50: 0.5em;
+  --pad-100: 1em;
+  --pad-150: 1.5em;
+  --pad-200: 2em;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fz-default);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-neutral--cream);
+}
+
+img {
+  max-width: 100%;
+}
+
+.content {
+  width: 95%;
+  max-width: var(--max-width);
+  font-size: var(--fz-primary);
+}
+
+.content__header {
+  display: flex;
+  align-items: center;
+  min-height: 10vh;
+  margin-block-end: var(--mg-100);
+  background-color: var(--clr-primary--soft-red);
+  padding: var(--pad-100) var(--pad-150);
+  border-radius: var(--bdrs);
+  justify-content: space-between;
+  color: var(--clr-neutral--very-pale-orange);
+}
+
+.balance__title {
+  font-size: 1.5rem;
+  font-weight: var(--fw-normal);
+  opacity: 0.8;
+}
+
+.balance__figure {
+  font-size: 2.5rem;
+  font-weight: var(--fw-bold);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  margin-inline-end: var(--mg-50);
+}
+
+.logo img {
+  object-fit: cover;
+}
+
+.content__body {
+  min-height: 30vh;
+  border-radius: var(--bdrs);
+  background-color: var(--clr-neutral--very-pale-orange);
+  padding: var(--pad-150);
+  display: flex;
+  flex-direction: column;
+}
+
+.main-title {
+  font-size: 2rem;
+  color: var(--clr-neutral--dark-brown);
+  font-weight: var(--fw-bold);
+}
+
+.chart-container {
+  position: relative;
+  height: 30vh;
+  width: 100%;
+  margin-block: var(--mg-100);
+  border-bottom: 1px solid var(--clr-neutral--cream);
+}
+
+#myChart {
+  cursor: pointer;
+  /* width: 100%; */
+}
+
+.chart-description {
+  display: flex;
+  justify-content: space-between;
+  align-items: last baseline;
+  color: var(--clr-neutral--dark-brown);
+}
+
+.text {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  font-weight: var(--fw-normal);
+}
+
+.total-spendings,
+.float {
+  font-weight: var(--fw-bold);
+}
+
+.total-spendings {
+  font-size: 3rem;
+}
+
+.float {
+  font-size: 1.2rem;
+  text-align: right;
+}
